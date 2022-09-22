@@ -2,9 +2,9 @@
 <html>
     <head>  
 		<link rel="stylesheet" href="./node_modules/dygraphs/dist/dygraph.css">
-		<script type="text/javascript"  src="./node_modules/dygraphs/dist/dygraph.js"></script>
-		<script type="text/javascript"  src="./node_modules/dygraphs/src/extras/crosshair.js"></script>
-		<script type="text/javascript"  src="./node_modules/median-quickselect/src/median-quickselect.js"></script>
+		<script type="text/javascript"  src="./src/dygraphs/dist/dygraph.js"></script>
+		<script type="text/javascript"  src="./src/dygraphs/src/extras/crosshair.js"></script>
+		<script type="text/javascript"  src="./src/median-quickselect/src/median-quickselect.js"></script>
 		<!-- <style type="text/css"> .annotation {}</style>   table { width: 100%; } -->
 		<style type="text/css"> 				 
 			.dygraph-legend {
