@@ -1,22 +1,16 @@
 # Changelog
 
-Changes of the `fitplotter` project are documented in this file
+Changes of the `tableplotter` project are documented in this file
 
 ## To do
 
-- ~~read multiple histograms in once~~
-- ~~toggle legend items~~
-- controls to changes fits appearence  on the chart
+- ?
 
-## 2022-08
+## 2019-2022
 
-Slow start of the project
+work offline
 
-## 2022-09-15
+## 2022-09-22
 
 First commit
 
-## 2022-09-17
-
-- read multiple histograms in once
-- toggle legend items
