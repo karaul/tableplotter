@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./node_modules/dygraphs/dist/dygraph.css"> 
+    <script type="text/javascript"  src="./node_modules/dygraphs/dist/dygraph.js"></script>
+    <script type="text/javascript"  src="./node_modules/dygraphs/src/extras/crosshair.js"></script>
+    <script type="text/javascript"  src="./node_modules/median-quickselect/src/median-quickselect.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 0px;
+            text-align: center;
+        }
+
+
+
+        /* Create three unequal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 10px;
+        }
+
+        /* Left and right column */
+        .column.side {
+            width: 15%;
+        }
+
+        /* Middle column */
+        .column.middle {
+            width: 70%;
+            height: 600px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .column.side,
+            .column.middle {
+                width: 100%;
+            }
+        }
+
+        .dygraph-legend {
+				width: auto !important;
+				min-width: 150px;
+				color: rgb(17, 17, 17);
+				background-color: #f0e6e6 !important; 
+				padding-left:5px;
+				border-color:#BABABA;
+				border-style:solid;
+				border-width:thin;
+				transition:0s 4s;
+				z-index: 80 !important;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+				border-radius: 3px;
+			}	
+
+    </style>
+</head>
+
+<body>
+
+     <div class="row">
+        <div class="column side" style="width: 10%;">
+ 
+            <label for="medfil1bin">Median span:</label>
+            <select name="mfs" id="medfil1bin">
+                <option>5</option>
+                <option>4</option>
+                <option selected>3</option>
+                <option>2</option>
+                <option>1</option>
+                <option>0</option>
+                <option>30</option>
+                <option>60</option>
+            </select>
+            <br>
+            <input id="myfile" type="file" value='' style="padding: 0px; margin: 5px; width: 100px;" />
+            <br>
+            <select multiple name="y" id="ylist" size=16 style="min-width: 100px;  text-overflow: ellipsis">
+                <option disabled value=0 style="font-style: italic; font-weight: bold;"> Data to add: </option>
+            </select>
+            <br>&nbsp <br>
+            <label for="yside" style="border: 1p;">y-axis:</label> <select name="yside" id="yside">
+                <option selected value='y'>left</option>
+                <option value='y2'>right</option>
+            </select style="padding: 5x;">
+            <br>&nbsp <br>
+            <select multiple name="y2" id="ylist2" size=8 style="min-width: 100px;  text-overflow: ellipsis">
+                <option disabled value=0 style="font-style: italic; font-weight: bold;"> Remove: </option>
+            </select>
+            <br>&nbsp <br>
+            <input id="clean" type="button" value='Remove all' />
+
+        </div>
+
+        <div  class="column middle" id="plotarea">
+            
+        </div>
+
+        <div class="column side" id="legend" style="width: 20%;">
+            
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="./src/index.js"></script> 
+
+</html>
